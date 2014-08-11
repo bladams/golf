@@ -5,7 +5,7 @@ boardSize = (10,10)
 while True: foo, bar, baz, globals()['board'] = None if globals().get('board') is None else [
         (
             sys.stdout.write('%.2d '%num),
-            [sys.stdout.write('X' if cell else '_') for cell in row],
+            [sys.stdout.write('X' if cell else ' ') for cell in row],
             sys.stdout.write('\n')
         ) for num, row in enumerate(board)
     ], time.sleep(1), sys.stdout.write('==============\n'), [
