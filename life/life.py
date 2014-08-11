@@ -7,7 +7,7 @@ while True: foo, bar, baz, globals()['board'] = None if globals().get('board') i
             [sys.stdout.write('X' if cell else ' ') for cell in row],
             sys.stdout.write('\n')
         ) for row in board
-    ], time.sleep(1), sys.stdout.write('==============\n'), [
+    ], time.sleep(1), sys.stdout.write('=' * boardSize[0]  +'\n'), [
             [random.random() < 0.5 for i in range(boardSize[0])] for j in range(boardSize[1])
         ] if 'board' not in globals() else [
             map(
