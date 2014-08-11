@@ -4,10 +4,9 @@ boardSize = (10,10)
 
 while True: foo, bar, baz, globals()['board'] = None if globals().get('board') is None else [
         (
-            sys.stdout.write('%.2d '%num),
             [sys.stdout.write('X' if cell else ' ') for cell in row],
             sys.stdout.write('\n')
-        ) for num, row in enumerate(board)
+        ) for row in board
     ], time.sleep(1), sys.stdout.write('==============\n'), [
             [random.random() < 0.5 for i in range(boardSize[0])] for j in range(boardSize[1])
         ] if 'board' not in globals() else [
